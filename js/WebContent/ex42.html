@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>속성</title>
+    <script>
+    var cnt=1;
+    var arr=["imgs/img01.jpg","imgs/daum.png",
+            "imgs/img03.jpg","imgs/img04.jpg"]; 
+    var img;
+    function fload(){
+        img=document.querySelector('img');
+    }
+    function prevImg(){
+        if(cnt==1)cnt=arr.length;
+        else cnt--;
+        img.setAttribute('src',arr[cnt-1]);
+        
+    }
+    function nextImg(){
+        if(cnt==arr.length) cnt=1;
+        else cnt++;
+        img.setAttribute('src',arr[cnt-1]);
+    }
+    </script>
+</head>
+<body onload="fload()">
+    <div>
+        <button onclick="prevImg()">prev</button>
+        <img alt="" src="imgs/img01.jpg" />
+        <button onclick="nextImg()">next</button>
+    </div>
+</body>
+</html>

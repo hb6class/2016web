@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>체이닝 기법</title>
+    <script>
+//    function func1(a){
+//        alert("인자로 a:"+a);
+//    }
+    var obj ={'num':0,'num2':0
+              ,'obj2':{"num":1234
+                       ,"func":function(){return this.num;}}
+              ,'setNum':function(num){
+                            this.num=num;
+                            return this;
+                        }
+              ,'getNum':function(){
+                            return this.num;
+                        }
+              ,'setNum2':function(num2){
+                            this.num2=num2;
+                            return this;
+                        }
+              ,'getNum2':function(){
+                            return this.num2;
+                        }
+             };
+        
+        obj.setNum(3333).setNum2(44444);
+        document.write("num:"+obj.getNum()
+                       +",num2:"+obj.getNum2());
+        alert(obj.obj2.func());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

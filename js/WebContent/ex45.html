@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        window.onload=function(){
+            var func=function(){
+                this.innerHTML='Ooops!';
+            };
+            var h1= document.querySelector("h1");
+            var p= document.querySelector("p");
+            
+            h1.onclick=func;
+            p.onclick=func;
+        };
+    </script>
+<body>
+
+<h1>Click on this text!</h1>
+<p>aaaaaaa</p>
+<!--onclick="this.innerHTML='Ooops!'"-->
+</body>
+</html>

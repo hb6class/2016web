@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        span{
+            color: red;
+            font-size: 2em;
+        }
+    </style>
+    <script>
+        var num=9;
+        var clrTime;
+        function func(){
+            var tagdiv=document.querySelector('span');
+            tagdiv.innerText=num--;
+            if(num>-1){
+            clrTime=window.setTimeout('func()',1000);
+            }else{
+                close();
+            }
+        }
+        function fopen(){
+            clrTime=window.setTimeout('func()',1000);
+        }
+        function fclose(){
+            window.clearTimeout(clrTime);
+            window.close();
+        }
+        fopen();
+    </script>
+</head>
+<body>
+    <p><span>10</span>초 뒤에 닫힙니다</p>
+    <button onclick="fclose()">close</button>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var contents;
+        var txt;
+        var opts;
+        var size;
+    window.onload=function(){
+        
+        var btns=document.querySelectorAll('button');
+        
+        contents=document.querySelectorAll('#content>*');
+        /*초기값 세팅*/
+        contents[0].style.fontSize='32px';
+        contents[1].style.fontSize='16px';
+        contents[2].style.fontSize='16px';
+        
+        btns[0].addEventListener('click',function(){
+//        txt=document.querySelector('select>option:checked'); 
+//        size=parseInt(txt.value);
+        txt=document.querySelectorAll('input');
+            for(var i=0; i<txt.length; i++){
+                if(txt[i].checked)size=parseInt(txt[i].value);
+            }
+           for(var i=0; i<contents.length; i++){ contents[i].style.fontSize=parseInt(contents[i].style.fontSize)+size+"px";
+           }
+        });
+        btns[1].addEventListener('click',function(){
+            
+//        opts=document.querySelectorAll('option');
+//           var a;
+//           for(a=0; a<opts.length; a++){
+//                if(opts[a].selected)break;
+//           }
+//           size = parseInt(opts[a].value);
+//        opts=document.querySelector('select');
+//            for(var i=0; i<opts.options.length; i++){
+//             if(opts.options[i].selected){
+//               size=parseInt(opts.options[i].value);
+//              }
+//            }
+           for(var i=0; i<contents.length; i++){ contents[i].style.fontSize=parseInt(contents[i].style.fontSize)-size+"px";
+           }
+        });
+        
+    };
+    </script>
+</head>
+<body>
+  <div id="menu">
+     <!--<select>
+         <option value="1" selected>1px</option>
+         <option value="5">5px</option>
+         <option value="10">10px</option>
+     </select> -->
+     <input type="radio" value="1" name="ra" />1
+     <input type="radio" value="5" name="ra"  checked/>5
+     <input type="radio" value="10" name="ra" />10
+      <button>크게</button>
+      <button>작게</button>
+  </div>
+   <div id="content">
+    <h1>javascript</h1>
+    <p>자바스크립트 수업이 끝나갑니다</p>
+    <p>짧은 시간이지만 개별로 학습을 진전하기길 바랍니다</p>
+    </div>
+</body>
+</html>

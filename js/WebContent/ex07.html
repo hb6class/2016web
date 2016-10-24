@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var obj = new Object();
+        // java:map 유사성향
+        obj["abc"]=100;
+        obj['bcd']=new Number(1000);
+        obj[34]=3.14;
+        obj['ddd']='자바의 오브젝트';
+        
+        var obj2 = {'ab':234,'bc':'java',1000:1234};
+        obj2['zzz']=333;
+        
+        var obj3 = new Object();
+        obj3.a=111;
+        obj3.b=444;
+        obj3.c=333;
+        var b=300;
+        a=100;
+        
+        
+        document.write(obj["abc"]+"<br/>");
+        document.write(obj["bcd"]+"<br/>");
+        document.write(obj["34"]+"<br/>");
+        document.write(obj["ddd"]+"<br/>");        document.write(obj['abc']+"<br/>");
+        document.write(obj['bcd']+"<br/>");
+        document.write(obj[34]+"<br/>");
+        document.write(obj['ddd']+"<br/><hr/>");
+        var ddd='bcd';
+        document.write(obj[ddd]+"<br/>");
+        document.write(obj[30+4]+"<br/><hr/>");
+        document.write(obj2["ab"]+"<br/>");
+        document.write(obj2["bc"]+"<br/>");
+        document.write(obj2[1000]+"<br/>");
+        document.write(obj2['zzz']+"<br/>");
+
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

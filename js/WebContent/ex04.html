@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border: solid red 1px;
+            border-radius: 50px;
+            text-align: center;
+            line-height: 100px;
+            line-height: 100px;
+            background-color: #0ff;
+        }
+        div:nth-child(2){
+            background-color: #00f;
+        }
+        div:nth-child(3){
+            background-color: #f0f;
+        }
+        div:nth-child(4){
+            background-color: #0f0;
+        }
+        div:nth-child(5){
+            background-color: #f00;
+        }
+        div:nth-child(6){
+            background-color: #ff0;
+        }
+    </style>
+    <script lang="javascript">
+    var lotto = new Array(6);
+        for(var i=0; i<6; i++){
+           var tmp = Math.floor(Math.random()*45+1);
+           var result=true;
+           for(var m=0; m<i; m++){//lotto[m]==tmp
+                if(lotto[m]==tmp)result=false;
+           }
+           if(result)lotto[i]= tmp;
+           else i--;
+        }
+        for(var i=0; i<lotto.length; i++){
+           document.write("<div>"+lotto[i]+"</div>"); 
+        }
+    </script>
+</head>
+<body>
+    <h1>로또번호 생성기</h1>
+    
+    
+</body>
+</html>
+
+
+
+
+
+
+
+

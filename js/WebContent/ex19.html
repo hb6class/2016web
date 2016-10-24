@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+//        var d = new Date();
+//        document.write(d+"<br/>");
+//        document.write(1900+d.getYear()+"<br/>");
+//        document.write(1+d.getMonth()+"<br/>");
+//        document.write(d.getDate()+"<br/>");
+//        document.write(d.getDay()+"<br/>");
+//        document.write(d.getHours()+"<br/>");
+//        document.write(d.getMinutes()+"<br/>");
+//        document.write(d.getSeconds()+"<br/>");
+        
+        //var window={func1:function(){},f1:{this}};
+        
+        function func1(){
+            this.add1='aaa';
+            this.func2=function(){
+                alert(this.add1+"run");
+                return;
+            };
+            return ;
+        }
+        
+        function func12(){return;}
+        func12.prototype.add1='ccc';
+        func12.prototype.func22=function(){
+            alert('run');
+            return;
+        };
+        
+        function func(){};
+        func.prototype=new func12();
+        func.prototype.add1='aazz';
+        func.prototype.add2='zzzz';
+        
+        var f2 = new Func();
+        document.write(f2.add1);
+        document.write(f2.add2);
+        //var f1 = new func1(); // 객체의 생성
+        //f1.func2();
+        //document.write(f1.add1);
+        //var f2 = func1();
+        
+        //document.write(f2.add1);
+        Array.prototype.langMax=function(){
+            //arguments.length
+            var max=0;
+            var temp=0;
+            for(var i=0; i<this.length; i++){
+                if(max<=this[i].length){
+                    max=this[i].length;
+                    temp=i;
+                };
+            }
+            return this[temp];
+        };
+        var arr = new Array('a','bbbbbbb','cccc','ddd','eee');
+        alert(arr.langMax());
+//        var temp = 'aaaa';
+//        document.write(temp.length);
+        
+    </script>
+</head>
+<body>
+    sdafasdf
+    asdfdsafdasdf
+</body>
+</html>

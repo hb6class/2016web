@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+    var arr=['img01.jpg','naver.gif','img03.jpg',
+            'img04.jpg','img05.jpg','img06.jpg'];
+    var idx=0;
+    function prevImg(){
+        if(idx==0)cnt=arr.length-1;
+        else idx--;
+        var txt='<img alt="" src="imgs/'+arr[idx]+'" />';
+        document.querySelector('img').outerHTML=txt;
+    }
+    function nextImg(){
+        if(idx==arr.length-1){
+            idx=0;
+        }else{idx++;}
+        var txt='<img alt="" src="imgs/'+arr[idx]+'" />';
+        document.querySelector('img').outerHTML=txt;
+    }
+        setInterval('nextImg()',1000);
+    </script>
+</head>
+<body>
+    <div>
+        <button onclick="prevImg()">prev</button>
+        <img alt="" src="imgs/img01.jpg" />
+        <button onclick="nextImg()">next</button>
+    </div>
+</body>
+</html>

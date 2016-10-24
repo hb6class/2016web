@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        table{
+            width: 100%;
+        }
+        td{
+            border: solid red 1px;
+        }
+    </style>
+    <script lang="javascript">
+        var a=2;
+        var b=1;
+        document.write("<table>");
+            document.write("<tr>");
+            for(a=2; a<10; a++){
+                document.write("<th>"+a+"단</th>");
+            }
+            document.write("</tr>");
+        for(b=1; b<10; b++){
+            document.write("<tr>");
+            for(a=2; a<10; a++){
+                document.write("<td>");
+                document.write(a+'x'+b+'='+a*b);
+                document.write("</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+    
+</head>
+<body>
+    
+</body>
+</html>

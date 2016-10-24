@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        var func1=function(ele,idx,array){
+            document.write(idx+":"+array[idx]+"</br>");
+        };
+        var array = [1, 2, 3, 4, 5, 5, 4, 3, 2, 1];
+        var output = array.indexOf(4);
+        alert(output);
+        output = array.indexOf(8);
+        alert(output);
+        output = array.lastIndexOf(4);
+        alert(output);
+        output = array.lastIndexOf(8);
+        alert(output);
+        //array.forEach(func1);
+        var func2=function(ele,idx,array){
+            return ele<3;
+        };
+        var arr2 = array.filter(func2);
+        document.write(arr2);
+    </script>
+</head>
+
+<body></body>
+
+</html>

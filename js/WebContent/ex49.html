@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var frm;
+    window.onload=function(){
+//        var btn = document.querySelector('button');
+//        btn.onclick=function(){
+//            var id=document.querySelector('input');
+//            window.location.href="ex48.html?id="
+//                +id.value;
+//        };
+        frm=document.querySelector('form');
+        frm.onsubmit=function(){
+            frm.setAttribute('action','http://naver.com');
+            alert('aaaa');
+            return false;
+        };
+    }
+    
+    </script>
+</head>
+<body>
+   <form>
+    <select>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+    </select>
+    <input type="text" name="id" />  
+    <button>이동</button>
+   </form>
+    <!--<form action="ex48.html">
+      <input type="text" name="id" />  
+        <input type='submit' value="이동"/>
+    </form>-->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

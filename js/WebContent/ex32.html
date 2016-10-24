@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"> </head>
+    <script>
+        function re(){
+            location.replace('http://www.naver.com');
+        }
+        function re2(){
+//            location.replace('http://daum.net');
+            window.location.href='http://google.com';
+        }
+        window.setTimeout('re()',5000);
+        function loadre(){
+            location.reload();
+        }
+    </script>
+<body>
+   <img alt="" src="imgs/logo_ai.png" onclick="re2()"/>
+    <form name="Form1">
+        <input type="button" value="현재페이지 reload" onclick="loadre()">
+        <br>
+        <input type="button" value="네이버 load" onclick="re()"> </form>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var a1=1;
+        var a2= new Number(1);
+        //if(a1===a2)alert("같다");
+        //else alert("다르다");
+        var b1="aaa";
+        var b2='aaa';
+        var b3= new String("aaa");
+        //if(b1===b3)alert("같다");
+        //else alert("다르다");
+        var c1=true;
+        var c2= new Boolean("true");
+        //if(c1===c2)alert("같다");
+        //else alert("다르다");
+        function func1(){
+            alert("func1");
+            return;
+        };
+        var func2 = function (){
+            alert("func2");
+            return;
+        };
+        
+        var d1=new Array(3);
+        d1[0]='a';
+        d1[1]=func2;
+        d1[2]='c';
+        var d2=['a',function (){
+            alert("func2");
+            return;
+        },['c','d']];
+        
+//        for(var tmp2 in d2){
+//            tmp2=parseInt(tmp2);
+//            switch(tmp2){
+//                case 0: 
+//                    alert(d2[tmp2]);
+//                    break;
+//                case 1: 
+//                    d2[tmp2]();
+//                    break;
+//                case 2: 
+//                    alert(d2[tmp2]);
+//                    break;  
+//                default: 
+//                    break;
+//            }
+//        }
+        var obj1 = new Object();
+//        obj1['a']='aaa';
+//        obj1['b']='bbb';
+//        obj1['c']='ccc';
+        obj1.a=1000;
+        obj1.b='bbbbb';
+        obj1.c=[2000,'ccccc'];
+        obj1.d={'a':'aa','b':'bb'};
+        obj1.e= function (){
+                alert("obj1.e");
+                return;
+                };
+        var obj2 = {'a':[2000,'ccccc'],'b':{'a':'aa','b':'bb'},'c':function (a){
+                alert("obj1.e:"+a);
+                return;
+                }};
+        temp=100;
+        window.alert(window.temp);
+        //obj2.c('전달');
+//        for(var tmp3 in obj1){
+//            alert(tmp3+":"+obj1[tmp3]);
+//        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

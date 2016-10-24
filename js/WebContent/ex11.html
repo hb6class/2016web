@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        
+        function func1(){
+            document.write("func1()<br/>");
+        }
+        function func3(){
+            document.write("func3()<br/>");
+        }
+        function func2(a){
+            a();
+            return;
+        }
+        function func4 = function(){
+            document.write("<h1>aaa</h1>");
+            return;
+        };
+        func2(func4);//callback
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

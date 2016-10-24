@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        img{width: 300px;}
+    </style>
+    <script>
+    function re(ur){
+        switch(ur){
+            case 'daum':
+             window.location.href='http://daum.net';
+                break;
+            case 'naver':
+             window.location.replace("http://naver.com");
+                break;
+            case 'google':
+             window.location="http://google.com";
+                break;
+            default: break;
+        }
+    }
+    </script>
+</head>
+<body>
+    <img src="imgs/daum.png" onclick="re('daum')"/><br/>
+    <img src="imgs/google.jpg" onclick="re('google')"/><br/>
+    <img src="imgs/naver.gif" onclick="re('naver')"/><br/>
+    <a href="http://www.w3schools.com/"><img src="imgs/logo_ai.png"/></a><br/>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+       
+    </style>
+    <script>
+        var cnt=5;
+        function addli(){
+            document.querySelector('ul').innerHTML
+                =document.querySelector('ul').innerHTML
+                    +'<li>menu'+(cnt++)+"</li>";
+        }
+    </script>
+</head>
+<body>
+    <h1 style="color:blue;" >쉽게 접근합시다</h1>
+    <p>노드 접근은 너무 힘드네요</p>
+    <input type="button" value="메뉴추가" onclick="addli()" />
+    <ul>
+        <li><a class="li3" href="#">menu1</a></li>
+        <li class="link2"><a href="#">menu2</a></li>
+        <li class="link2 link3 li3"><a href="#" class="li1">menu3</a></li>
+        <li id='li4'>menu4</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>클로져</title>
+    <script>
+        a=1000;
+        function func1(){
+           var func2 = function(){
+                alert("func2");
+            };
+           return func2;
+        };
+        
+        alert("첫번째a:"+a);
+        a=func1();
+        a();
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

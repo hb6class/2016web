@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var cnt =2;
+        function func(){
+            var tag = document.querySelector("div");
+            tag.innerHTML='<img src="imgs/img0'+cnt+'.jpg"/>';
+            cnt++;
+            if(cnt==9)cnt=1;
+        }
+        setInterval('func()',1000);
+    </script>
+</head>
+<body>
+    <div><img src="imgs/img01.jpg"/></div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>클로져를 이용한 bean객체 생성</title>
+    <script>
+    function student(){
+        return{'num':0,'kor':0,'eng':0,'math':0
+               ,'getNum':function(){return this.num;}
+               ,'setNum':function(a){this.num=a;}
+               ,'getKor':function(){return this.kor;}
+               ,'setKor':function(b){this.kor=b;}
+               ,'getEng':function(){return this.eng;}
+               ,'setEng':function(c){this.eng=c;}
+               ,'getMath':function(){return this.math;}
+               ,'setMath':function(d){this.math=d;}
+              };
+    }
+        var arr = new Array();
+        arr[0]=student();
+        arr[0].setNum(3333);
+        arr[0].setKor(90);
+        arr[0].setEng(80);
+        arr[0].setMath(80);
+        arr[1]=student();
+        arr[1].setNum(4444);
+        arr[1].setKor(90);
+        arr[1].setEng(90);
+        arr[1].setMath(90);
+//        arr[2]=student(3333,80,60,70);
+//        arr[3]=student(4444,90,20,0);
+//        arr[4]=student(5555,90,20,0);
+        
+        document.write("<table>");
+        //for(var temp=0; temp<arr.length; temp++){
+        for(var temp in arr){
+            document.write("<tr>");
+            document.write("<td>");
+            document.write(arr[temp].getNum());
+            document.write("</td>");
+            document.write("<td>");
+            document.write(arr[temp].getKor());
+            document.write("</td>");
+            document.write("<td>");
+            document.write(arr[temp].getEng());
+            document.write("</td>");
+            document.write("<td>");
+            document.write(arr[temp].getMath());
+            document.write("</td>");
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

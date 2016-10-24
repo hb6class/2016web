@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function fclose(){
+            window.close();
+        }
+        var i=5;
+        function cnt(){
+            document.form1.inp.value=i--;
+            if(i<0)fclose();
+            cl = window.setTimeout('cnt()',1000);
+        }
+        function fcloseNon(){
+            window.clearTimeout(cl);
+        }
+        var cl = window.setTimeout('cnt()',1000);
+    </script>
+</head>
+<body>
+   <form name="form1">
+    <input type="text" name="inp"/>
+    <input type="button" value="창닫기" onclick="fclose()"/>
+    <input type="button" value="창닫기취소" onclick="fcloseNon()"/>
+    </form>
+</body>
+</html>

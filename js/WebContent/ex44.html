@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #di{
+            width: 500px;
+            height: 200px;
+            background-color: aqua;
+        }
+    </style>
+    <script>
+        
+        window.onload=function(){
+           var div=document.querySelector("div");
+            div.innerHTML="<h1>add</h1>"; 
+            var btn= document.querySelector("button");
+//            btn.onclick=function(){
+//                div.innerHTML="<h1>버튼 클릭</h1>"; 
+//            };
+            btn.onmouseover=function(){
+                div.innerHTML="<h1>버튼 위에</h1>"; 
+            };
+            btn.onmouseout=function(){
+                div.innerHTML="<h1>버튼 밖으로</h1>"; 
+            };
+            btn.onmousedown=function(){
+                div.innerHTML="<h1>버튼 눌림</h1>"; 
+            };
+            btn.onmouseup=function(){
+                div.innerHTML="<h1>버튼 위로</h1>"; 
+            };
+            btn.ondblclick=function(){
+                div.innerHTML="<h1>버튼 더블클릭</h1>"; 
+            };
+            btn.onfocus=function(){
+                div.innerHTML="<h1>포커스가 버튼에</h1>";
+            };
+            btn.onkeypress=function(e){
+                if(e.keyCode==13){
+                div.innerHTML="<h1>포커스로 눌림</h1>";
+                }
+            };
+            btn.onblur=function(){
+                div.innerHTML="<h1>포커스로 빠짐</h1>";
+            };
+            var inp=document.querySelector('input');
+            inp.onkeypress=function(e){
+//                div.innerHTML=e.keyCode;
+                div.innerHTML="입력press";
+            };
+            inp.onkeyup=function(e){
+//                div.innerHTML=inp.value;
+                div.innerHTML="입력up";
+            };
+            inp.onkeydown=function(e){
+                div.innerHTML="입력down";
+            };
+        };
+    </script>
+</head>
+<body>
+    <div></div>
+    <button>추가버튼</button>
+    <input type="text" />
+    <div id="di">text</div>
+</body>
+</html>

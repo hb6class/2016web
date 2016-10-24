@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body>div{
+            width: 500px;
+            height: 400px;
+            background-color: aqua;
+            position: relative;
+        }
+        div>div{
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+        }
+        div>div:last-child{
+            background-color: red;
+            position: absolute;
+            
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var txt=document.querySelector("input");
+            var txt2=document.querySelector("#txt2");
+            var btn=document.querySelector("button");
+            var func1=function(e){
+                e.target.value="";
+            };
+//            txt.onclick=func1;
+//            txt.onfocus=func1;
+            txt.addEventListener('click',func1);
+            txt.addEventListener('focus',func1);
+            txt2.addEventListener('focus',func1);
+            
+            btn.onclick=function(){
+                if(txt.value==''){
+                    alert("비었습니다");
+                    txt.focus();
+                }else if(txt.value.length<6){
+                    alert("6자이상입력바람");
+                    txt.value="";
+                    txt.focus();
+                }else{
+                    alert(txt.value.length+"자 : ok");
+                }
+            };
+            
+            
+            var btns=document.querySelectorAll(".control1");
+            var x=0;
+            btns[0].onclick=function(){
+                x-=10;
+                var box2=document.querySelector("#box2");
+                box2.style.marginLeft=x+'px';
+                box2.innerText="x:"+box2.style.marginLeft;
+                
+                box3=document.querySelector("#box3");
+                box3.style.left=x+"px";
+                box3.innerText="x:"+box3.style.left;
+            };
+            btns[1].onclick=function(){
+                x+=10;
+                
+                var box2=document.querySelector("#box2");
+                box2.setAttribute('style','margin-left: '+x+'px');
+                box2.innerText="x:"+box2.style.marginLeft;
+                
+                box3=document.querySelector("#box3");
+                box3.setAttribute('style','left: '+x+'px;');
+                box3.innerText="x:"+box3.style.left;
+            };
+        };
+    </script>
+</head>
+<body>
+   <input type="text" value="6자이상"/>
+   <input id='txt2' type="text" value="두번째"/><button>검사</button><br/>
+   <button class="control1">←</button>
+   <button class="control1">→</button>
+    <div>
+        <div id="box1">box1</div>
+        <div id="box2">box2</div>
+        <div id="box3">box3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var a= 100; // 전역변수
+        var func1 = function (){
+            var a =0;   // 지역변수
+            a+=10;
+            
+            return;
+        };
+        for(var a=0; a<5; a++){
+            var a=0;
+            alert(a);
+        }
+//        func1();
+        alert("a:"+a);
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>속성</title>
+    <style>
+        body>div{
+            position: relative;
+        }
+        body>div>a{
+            position: absolute;
+            top: 50px;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            background-color: red;
+            text-align: center;
+            line-height: 17px;
+            color: white;
+            text-decoration: none;
+        }
+        body>div>a:last-child{
+            left: 75px;
+        }
+    </style>
+    <script>
+    var cnt=0;
+    var imgs;
+    function fload(){
+        imgs=document.querySelectorAll('img');
+        for(var i=0; i<imgs.length; i++){
+         imgs[i].setAttribute('style','display:none');
+         document.querySelector('a').setAttribute('href','http://daum.net');
+        }
+        imgs[0].removeAttribute('style');
+    }
+    function prevImg(){
+        for(var i=0; i<imgs.length; i++){
+         imgs[i].setAttribute('style','display:none');
+        }
+        if(cnt==0)cnt=imgs.length-1;
+        else cnt--;
+        imgs[cnt].removeAttribute('style');
+        return false;
+    }
+    function nextImg(){
+        for(var i=0; i<imgs.length; i++){
+         imgs[i].setAttribute('style','display:none');
+        }   
+        if(cnt==imgs.length-1)cnt=0;
+        else cnt++;
+        imgs[cnt].removeAttribute('style');
+        return false;
+    }
+        function re(){
+            window.location.href='http://naver.com';
+        }
+    </script>
+</head>
+<body onload="fload()">
+    <div>
+        <a href="#" onclick="prevImg()">◀</a>
+        <img src="imgs/img01.jpg" onclick="re()" />
+        <img src="imgs/img02.jpg" />
+        <img src="imgs/img03.jpg" />
+        <img src="imgs/img04.jpg" />
+        <img src="imgs/daum.png" />
+        <a href="#" onclick="nextImg()">▶</a>
+    </div>
+</body>
+</html>

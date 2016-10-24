@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            width: 500px;
+            height: 400px;
+            background-color: red;
+        }
+    </style>
+    <script>
+    window.onload=function(){
+       var div=document.querySelector('div'); 
+        div.onmousemove=function(e){
+            div.innerText='x:'+e.screenX+',y:'+e.screenY;
+            //'x:'+e.pageX+',y:'+e.pageY;
+            //'x:'+e.clientX+',y:'+e.clientY;
+        };
+    };
+    
+    </script>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

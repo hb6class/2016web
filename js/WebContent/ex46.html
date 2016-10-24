@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        p{background-color: aqua;}
+        div{
+            border: solid red 1px;
+        }
+    </style>
+    <script>
+        window.onload=function (){
+            var btn=document.querySelector('button');
+            var btn2=document.querySelectorAll('button')[1].addEventListener('click',function(){
+                div.innerHTML='<p>이벤트진행목록</p>';
+            });
+            var div=document.querySelector('div');
+            var func1=function(){
+            div.innerHTML=div.innerHTML+'<p>버튼누름</p>';
+            };
+            btn.addEventListener('click',func1);
+            btn.addEventListener('mouseover',function(){
+                div.innerHTML=div.innerHTML+'<p>버튼위로</p>';
+            }); btn.addEventListener('dblclick',function(){
+                div.innerHTML=div.innerHTML+'<p>더블클릭</p>';
+            });
+            div.addEventListener('mouseenter',function(){alert('dddddd');});
+        };
+    </script>
+</head>
+<body>
+    <button>버튼</button><button>clear</button>
+    <div>
+        <p>이벤트진행목록</p>
+    </div>
+    
+    
+</body>
+</html>
