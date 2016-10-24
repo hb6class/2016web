@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<student>
+		<no>1</no>
+		<name>홍길동</name>
+	</student>
+	<student>
+		<no>2</no>
+		<name>홍길자</name>
+	</student>
+	<student>
+		<no>3</no>
+		<name>김길자</name>
+	</student>
+</data>
