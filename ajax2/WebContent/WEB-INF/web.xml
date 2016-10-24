@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>ajax2</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  	<servlet-name>xml</servlet-name>
+  	<servlet-class>com.hb.srv.XmlResult</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>xml</servlet-name>
+  	<url-pattern>/result.xml</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>list</servlet-name>
+  	<servlet-class>com.hb.srv.GuestList</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>list</servlet-name>
+  	<url-pattern>/list.xml</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>json</servlet-name>
+  	<servlet-class>com.hb.srv.ListJson</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>json</servlet-name>
+  	<url-pattern>/list.json</url-pattern>
+  </servlet-mapping>
+</web-app>
+
+
+
+
+
+
+
+
+
+
