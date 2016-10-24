@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+    $(document).ready(function(){
+        //$('button').eq(0).click(function(){
+            
+            $('h1').animate({'marginLeft':'300px'},3000);//.animate({'marginLeft':'0px'},3000);
+           
+//        }).next().click(function(){
+//            //$('h1').clearQueue();
+//            $('h1').stop();
+//            
+//        });
+//        $('h1').dequeue();
+        $('h1').finish();
+    });
+    </script>
+</head>
+<body>
+   <button>run</button>
+   <button>stop</button>
+<h1>abcde</h1>
+</body>
+</html>

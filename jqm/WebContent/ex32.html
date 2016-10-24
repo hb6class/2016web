@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+$(document).ready(function(){
+    var cnt=1;
+    function view(){
+        $('div').dequeue();
+        if(cnt<8)cnt++;
+        else cnt=1;
+        $('div').fadeOut(1000,function(){           $('img').attr("src","imgs/bimg0"+cnt+".jpg");  
+        });
+        $('div').fadeIn(1000);
+        return false; 
+    }
+    $('a').click(view);
+    window.setInterval(view,3000);
+});
+    </script>
+</head>
+<body>
+    <div>
+        <img src="imgs/bimg01.jpg" alt=""/>
+    </div>
+    <a href="#">next</a>
+</body>
+</html>

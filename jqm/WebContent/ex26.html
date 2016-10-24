@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+        $(document).ready(function(){
+//            $('button').mouseover(function(){
+//                $(this).css('background-color','red');
+//            });
+//            $('button').focus(function(){
+//                $(this).css('background-color','red');
+//            });
+//        $('button').on('mouseover focus',function(){
+//            //$(this).css('background-color','blue');
+//            alert($(this).html());
+////            $('button').off();
+//        });
+//            //$('button').off();
+            
+//        $(document).on('click','button',function(){
+//                alert($(this).html());
+//            }); 
+        $('button').on({'focus':function(){alert('focus');},'mouseover':function(){
+            
+        alert('mouseover');}
+                       });
+
+//            $('button').bind('click',function(){
+//                alert('bind');
+//            });
+//            $(document).delegate('button','click',function(){
+//                alert('delegate');
+//            }); 
+//            $('button').live('click',function(){
+//                alert('live');
+//            });
+//            $('button').on('mouseover',function(){
+//                $(this).css('background-color','blue');
+//            }); 
+//            
+            
+        });
+    </script>
+</head>
+<body>
+    <button>이벤트</button>
+</body>
+</html>

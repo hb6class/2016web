@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+        $(function(){
+            //alert($(':password').val());
+            $(':password').val($(':text').val());
+            alert($('select').val());//.attr('value'));
+        });
+    </script>
+</head>
+<body>
+   
+    <form>
+        <p><label for="id">id</label>
+        <input type="text" id="id" value="admin"></p>
+        <p><label for="pw">pw</label>
+        <input type="password" id="pw" value=""></p>
+        <p><select>
+            <option value="1">1</option>
+            <option value="2" selected>2</option>
+        </select></p>
+        <p><input type="submit" value="전송">
+        <input type="reset" value="취소"></p>
+    </form>
+</body>
+</html>

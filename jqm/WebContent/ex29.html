@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>애니메이션1</title>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('button').eq(0).click(function(){
+                $('h1').hide('slow',function(){alert('감추기끝');});
+            }).next().click(function(){
+                $('h1').show('1000');
+                //fast,slow,normal;
+            });
+            $('button').eq(2).click(function(){
+                $('h1').toggle('fast');
+            });
+            $('button').eq(3).click(function(){
+                $('h1').fadeOut('slow');
+            }).next().click(function(){
+                $('h1').fadeIn('slow');
+            }).next().click(function(){
+                $('h1').fadeToggle('slow');
+            }).next().click(function(){
+                $('h1').fadeTo(3000,0.2);
+            }).next().click(function(){
+                $('h1').fadeTo(3000,0.8);
+            }).next().click(function(){
+                $('h1').slideUp('slow');
+            }).next().click(function(){
+                $('h1').slideDown('slow');
+            }).next().click(function(){
+                $('h1').slideToggle('slow');
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>감추기</button>
+    <button>보이기</button>
+    <button>토 글</button>
+    <button>방식1-1</button>
+    <button>방식1-2</button>
+    <button>방식1-3</button>
+    <button>원리1-1</button>
+    <button>원리1-2</button>
+    <button>방식2-1</button>
+    <button>방식2-2</button>
+    <button>방식2-3</button>
+    <h1>내용보기</h1>
+</body>
+</html>

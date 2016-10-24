@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>플러그인</title>
+    <style>
+        .content>div{
+            width: 320px;
+            margin: 0px auto;
+            position: relative;
+        }
+        .bx-pager{
+            width: 100px;
+            text-align: center;
+            margin: 0px auto;
+        }
+        .bx-pager-item{
+            display: inline;
+            margin: 0px 5px;
+        }
+        .bx-viewport{
+            width: 650px;
+            margin: 0px auto;
+        }
+        .bx-prev,.bx-next{
+            position: absolute;
+            top: 180px;
+            background-color: red;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 15px;
+            text-indent: -999px;
+        }
+        .bx-next{
+            left: 285px;
+        }
+        .bx-caption{
+            top: 200px;
+            position: absolute;
+            width: 100%;
+            height: 50px;
+            background-color: rgba(255,255,255,0.7);
+        }
+        #bx-pager img{
+            width: 55px;
+            height: 55px;
+        }
+    </style>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script>
+$(document).ready(function(){
+    var obj={
+        'pagerCustom':'#bx-pager',
+        'mode': 'fade',
+        'captions': true
+//        'minSlides':1,
+//        'maxSlides':3,
+//        'slideWidth':320,
+//        'slideMargin':50,
+//        'moveSlides':1
+//        'startSlide':1,
+//        'mode':'vertical'
+    };
+    
+    $('.bxslider').bxSlider(obj);
+
+});
+    </script>
+</head>
+<body>
+    <div class="header">
+        <img alt="" src="imgs/logo_ai.png" height="60"/>
+    </div>
+    <div class="menu">
+        <a href="#">menu1</a>
+        <a href="#">menu2</a>
+        <a href="#">menu3</a>
+        <a href="#">menu4</a>
+    </div>
+    <div class="content">
+        <div>
+            <ul class="bxslider">
+                <li><img src="imgs/bimg01.jpg" title="첫번째 이미지"/></li>
+                <li><img src="imgs/bimg02.jpg" title="두번째 이미지"/></li>
+                <li><img src="imgs/bimg03.jpg" title="세번째 이미지"/></li>
+                <li><img src="imgs/bimg04.jpg" title="네번째 이미지"/></li>
+                <li><img src="imgs/bimg05.jpg" title="다섯번째 이미지"/></li>
+            </ul>
+
+            <div id="bx-pager">
+                <a href="" data-slide-index='0'><img src="imgs/simg01.jpg"/></a>
+                <a href="" data-slide-index='1'><img src="imgs/simg02.jpg"/></a>
+                <a href="" data-slide-index='2'><img src="imgs/simg03.jpg"/></a>
+                <a href="" data-slide-index='3'><img src="imgs/simg04.jpg"/></a>
+                <a href="" data-slide-index='4'><img src="imgs/simg05.jpg"/></a>
+            </div>
+
+        </div>
+        <h1>환영합니다</h1>
+        <p>방문해주셔서 감사합니다</p>
+    </div>
+    <div class="footer">
+        Copyright 1999-2016 by Refsnes Data. All Rights Reserved.
+Powered by W3.CSS.
+
+    </div>
+</body>
+</html>

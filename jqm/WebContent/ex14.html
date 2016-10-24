@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+//        $(window).load(function(){
+//            /*페이지 로딩 후 제이쿼리 실행*/
+//            alert('load');
+//        });
+//        var func =function(){
+//            $('div')
+//            /*페이지 엘리먼트로딩 후 제이쿼리 실행*/
+//            alert("ready");
+//        };
+//        var doc = window.document;
+//        $(doc).ready(func);
+        
+//        var $=jQuery;
+//        
+//        $();
+//        window.onload=function(){
+//            var $='aaaa';
+//        
+//            (function($){
+//                $('div').html("<h1>h1</h1>");
+//            })(jQuery);
+//        };
+//        var func=function (){
+//            alert('document');
+//        };
+//        window.addEventListener('load',func);
+//        window.onload=function(){
+//            alert('window');
+//        };
+        $(document).ready(function(){
+            var div=$('div');
+            $('button').click(function(){
+//                alert('btn click');
+                if($(this).text()=="bg적용"){
+                   div.css('background-color','red'); 
+                }else{
+                    div.append("<p>"+$(this).text()+'클릭</p>');
+                }
+                
+            });//click end
+            $('button').dblclick(function(){
+                if($(this).text()=='btn1')
+                    $('div>p:contains("btn1클릭")').css('color','blue');
+                if($(this).text()=='btn2')
+                    $('div>p:contains("btn2클릭")').css('color','yellow');
+            });
+            $('button').eq(1).click();
+        });
+    </script>
+</head>
+<body>
+   <button>btn1</button>
+   <button>btn2</button>
+   <button>bg적용</button>
+    <div></div>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

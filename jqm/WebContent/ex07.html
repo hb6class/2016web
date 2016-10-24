@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+        $(function(){
+            //$('h1').css('border','1px solid red');
+            //$('ol>li:contains("menu3")').css('border','1px solid red');
+            //$('ol>li:has("strong")').css('border','1px solid red');
+            //$('ol>li:has("li")').css('border','1px solid red');
+            //$('ol>li').find('em').css('border','1px solid red');
+            //$('ol>li:eq(1)').siblings().css('border','1px solid red');
+           //$('ol>li').not('ol>li:eq(2)').css('border','1px solid red'); 
+            //$('ol>li').contents().filter('strong').css('border','1px solid red'); 
+            //$('ol>li').filter(".cl1").css('border','1px solid red'); 
+            //$('ol>li').find("a").css('border','1px solid red'); 
+            //$('a:contains("menu3")').parent().children().css('border','1px solid red'); 
+            //$('ol>li:last').children().children('li:last').css('border','1px solid red'); 
+            //$('ol>li:last').children().children().children().css('border','1px solid red').end().css('border','1px solid blue');
+            
+            $('ol>li').not('li:eq(1)').filter('.cl1').css('border','1px solid blue').end().css('color','red');
+        });
+    </script>
+</head>
+<body>
+    <h1>목차</h1>
+    <ol>
+        <li>menu1</li>
+        <li>menu<em>2</em></li>
+        <li class="cl1"><a href="#">menu3</a></li>
+        <li><strong>menu4</strong></li>
+        <li>
+           <ul>
+            <li>menu4-1</li>
+            <li><a href="#">menu4-2</a></li>
+           </ul>
+        </li>
+    </ol>
+</body>
+</html>

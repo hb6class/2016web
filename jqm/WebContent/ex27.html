@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+//        $(document).ready(function(){
+//            $('h1').on('click',function(){
+//                var leng=$('h1').length;
+//                var tag=$(this).html();
+//                $('div').append("<h1>"+leng+"-"+tag+"</h1>");
+//            });
+//        });
+        $(document).ready(function(){
+            $('div').on('click','h1',function(){
+                var leng=$('h1').length;
+                var tag=$(this).html();
+                $('div').append("<h1>"+leng+"-"+tag+"</h1>");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <h1>원래 있던 엘리먼트</h1>
+    </div>
+</body>
+</html>

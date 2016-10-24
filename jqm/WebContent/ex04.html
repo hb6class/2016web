@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+    $(function(){
+        $('a[title]').css('background-color','yellow');
+        $('a[href="http://daum.net"]').css('color','red');
+        $("a[href^='mailto']").css('border','solid 1px red');
+        $("a[href$='com']").css('background-color','pink');
+        $("a[href*='homeplus']").css('color','orange');
+    });
+    </script>
+</head>
+<body>
+    <h1>리스트</h1>
+    <ul>
+        <li><a href="http://naver.com">네이버</a></li>
+        <li><a href="http://daum.net">다음</a></li>
+        <li><a href="http://www.hanbitedu.co.kr" title="한빛홈페이지">한빛</a></li>
+        <li><a href="mailto:master3@hanbitedu.co.kr">한빛관리자 메일</a></li>
+        <li><a href="http://google.com">구글</a></li>
+        <li><a href="http://www.homeplus.co.kr">홈플러스</a></li>
+    </ul>
+</body>
+</html>

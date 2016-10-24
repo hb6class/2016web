@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+    $(document).ready(function(){
+        $('select').change(function(){
+            alert($(this).val());
+        });
+        $('input').change(function(){
+//            var tot="?";
+//            $('input:checked').each(function(idx,ele){
+//            if(idx==0)tot+='ck='+$(ele).val();
+//            else tot+='&ck='+$(ele).val();
+//            });
+//            alert(tot);
+            alert($('input:checked').length);
+        });
+        $("body>form").submit(function(){
+            alert("폼 작동");
+            return false;
+        });
+    });
+    </script>
+</head>
+<body>
+  <form action="ex01.html">
+   <label for="sel">선택:</label>
+    <select name="sel" id="sel">
+        <option value="a">a1</option>
+        <option value="b">b2</option>
+        <option value="c">c3</option>
+        <option value="d">d4</option>
+    </select>
+    <p>
+        <input type="checkbox" name="ck" value="x1" />체크1
+        <input type="checkbox" name="ck" value="x2"/>체크2
+        <input type="checkbox" name="ck" value="x3"/>체크3
+    </p>
+    <button type="submit">전송</button>
+    </form>
+</body>
+</html>

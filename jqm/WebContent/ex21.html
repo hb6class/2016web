@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body>div{
+            width: 528px;
+            margin: 0px auto;
+        }
+        #bimgs{
+            width: 528px;
+            text-align: center;
+        }
+        #simgs{
+            width: 528px;
+            height: 176px;
+            overflow: hidden;
+            position: relative;
+        }
+        #simgs>ul{
+            list-style: none;
+        }
+        #simgs>ul>li{
+            float: left;
+        }
+        #simgs>ul>li>img{}
+        #simgs>a{
+            font-size: 20px;
+            text-indent:-999px;
+            position: absolute;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            top: 80px;
+            left: 480px;
+            background-color: red;
+            border-radius: 25px;
+        }
+        #simgs>a:nth-child(2){
+            left: 20px;
+        }
+    </style>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+        var cnt=0;
+        var result=0;
+        var clear;
+        $(document).ready(function(){
+//            var add3="<li>"+$('ul>li').eq(6).html()+"</li>";
+//            var add4="<li>"+$('ul>li').eq(7).html()+"</li>"; 
+//            $('ul>li:eq(0)').before(add3).before(add4);
+            
+            var add1=$("<li></li>").append($('ul>li').eq(0).html());
+            var add2="<li>"+$('ul>li').eq(1).html()+"</li>";
+            $('ul').append(add1).append(add2);
+            
+            
+            $('#simgs>a').click(function(){
+                var btn=$(this).text();
+                if(btn=='next'){
+                    if(cnt<7)cnt++;
+                    else cnt=0;
+                    result=-176*cnt;
+                    $('ul').css('margin-left',result+'px');
+                    start(cnt);
+                }else{
+                    if(cnt>0)cnt--;
+                    else if(cnt==0){
+                        var add4="<li>"+$('ul>li').eq(7).html()+"</li>"; 
+                        $('ul>li:eq(0)').before(add4);
+                    }
+                    else if(cnt==-1){
+                        var add3="<li>"+$('ul>li').eq(6).html()+"</li>"; 
+                        $('ul>li:eq(0)').before(add3);
+                    }else{
+                        $('ul>li:eq(0)').remove();
+                        $('ul>li:eq(0)').remove();
+                        cnt=5;
+                    }
+                    result=-176*cnt;
+                    $('ul').css('margin-left',result+'px');  
+                }
+                return false;
+            }); //
+            function start(tmp){
+               window.clearTimeout(clear);
+               var tmp2=tmp?tmp+2:2; $('#bimgs>img').attr('src',"imgs/bimg0"+tmp2+".jpg");
+                clear=window.setTimeout("$('#simgs>a:eq(1)').click()",2000);
+            }
+            clear=window.setTimeout(start,2000);
+        });
+        
+    </script>
+</head>
+<body>
+  <div>
+    <div id="bimgs">
+        <img alt="" src="imgs/bimg01.jpg"/>
+    </div>
+    <div id="simgs">
+        <ul>
+            <li><img alt="" src="imgs/simg01.jpg"/> </li>
+            <li><img alt="" src="imgs/simg02.jpg"/> </li>
+            <li><img alt="" src="imgs/simg03.jpg"/> </li>
+            <li><img alt="" src="imgs/simg04.jpg"/> </li>
+            <li><img alt="" src="imgs/simg05.jpg"/> </li>
+            <li><img alt="" src="imgs/simg06.jpg"/> </li>
+            <li><img alt="" src="imgs/simg07.jpg"/> </li>
+            <li><img alt="" src="imgs/simg08.jpg"/> </li>
+        </ul>
+        <a href="#">prev</a>
+        <a href="#">next</a>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

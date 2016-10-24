@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+        $(function(){
+            $('li:visible').css('color','red');
+           $('li:hidden').css('display','block'); 
+        });
+    </script>
+</head>
+<body>
+    <h1>메뉴</h1>
+    <ul>
+        <li>menu1</li>
+        <li style="display:none;">menu2</li>
+        <li>menu3</li>
+    </ul>
+</body>
+</html>

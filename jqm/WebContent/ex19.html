@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#id,#pw').click(function(){
+                $(this).val("");
+            }).focusin(function(){  //.focus()
+                $(this).val("");
+            }).focusout(function(){ //.blur()
+                if($(this).val()==""){
+                    //alert("비었습니다");
+                    var errMsg=$("<span>*빈칸x</span>");
+                    errMsg.css("color",'red');
+                    $(this).next().html(errMsg);
+                    $(this).focus();   //this.focus();
+                }else if($(this).val().length<8){
+                    var errMsg=$("<span>*8자이상</span>");
+                    errMsg.css("color",'red');
+                    $(this).next().html(errMsg);
+                    this.focus();
+                }else{
+                    $(this).next().html("");
+                }
+            });
+            
+            $('button').click(function(){
+                if($('#id').val()=="id를 입력하세요"){
+                    var errMsg=$("<span>*빈칸x</span>");
+                    errMsg.css("color",'red');
+                    $('#id').next().html(errMsg);
+                    return false;
+                }
+                if($('#pw').val()=="******"){
+                    var errMsg=$("<span>*빈칸x</span>");
+                    errMsg.css("color",'red');
+                    $('#pw').next().html(errMsg);
+                    return false;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <form>
+        <p><label for="id">id</label><input type="text" id="id" value="id를 입력하세요"><span></span></p>
+        <p><label for="pw">pw</label><input type="password" id="pw" value="******"><span></span></p>
+        <button>가입</button>
+    </form>
+</body>
+</html>

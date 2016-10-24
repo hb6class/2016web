@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>애니메이션2</title>
+    <style>
+        h1{
+            width: 100px;
+            height: 80px;
+            border: 1px solid red;
+        }
+        h2{
+            background-color: yellow;
+            position: absolute;
+        }
+    </style>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+    $(document).ready(function(){
+        var obj1={
+            'marginLeft':'300px'
+            ,'border-radius':'40px'
+        };
+        $('h1').animate(obj1,4000,function(){
+            //alert('end');
+        });
+        
+        $('h2').delay(1000).animate({'left':'200px','opacity':0.2},3000).animate({'top':'100px'},3000).animate({'left':'400px','opacity':0.2},3000);
+        
+        $('h3').animate({'marginLeft':'200px'},3000).animate({'marginTop':'100px'},3000).animate({'marginLeft':'400px'},3000);
+
+    });
+    </script>
+</head>
+<body>
+    <h1>제목1</h1>
+    <h2>제목2</h2>
+    <h3>제목3</h3>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

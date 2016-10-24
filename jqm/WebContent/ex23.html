@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            height: 800px;
+            line-height: 800px;
+        }
+    </style>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(document).mousemove(function(e){
+            var _x=e.pageX;
+            var _y=e.pageY;
+            $('div>p').text("x:"+_x+",y:"+_y);
+            });
+            $(window).scroll(function(){
+                var _h= $(this).scrollTop();
+                $('div>p').text("높이"+_h);
+            });
+        });
+        
+    </script>
+</head>
+<body>
+    <div>
+        <p></p>
+    </div>
+    
+</body>
+</html>

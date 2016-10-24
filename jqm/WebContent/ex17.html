@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        p{
+            display: none;
+            background-color: red;
+        }
+    </style>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('div').mouseover(function(){
+                $('p').css('display',"block");
+            }).mouseout(function(){
+                $('p').css('display',"none");
+            });
+            $('p').mousedown(function(){
+                $(this).css('background-color','blue');
+            }).mouseup(function(){
+                $(this).css('background-color','red');
+            });
+//            $('p').mouseleave(function(){
+//                $(this).css('color','blue');
+//            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        내용보기
+        <p>내용1</p>
+        <p>내용2</p>
+        <p>내용3</p>
+        <p>내용4</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            $('input').focus(function(){
+                $(this).val("");
+            });
+            $('input').blur(function(){
+                if($(this).val()=='')$(this).val('입력필수');
+            });
+            $('input').eq(0).focus();
+            $('button').click(function(){
+                $('input').eq(1).focus();
+            });
+            $('input').eq(0).keydown(function(e){
+                $('p:eq(0)').text(e.keyCode);
+                
+            });
+            $('input').eq(0).keyup(function(e){
+                $('p:eq(1)').text($(this).val());
+                if(e.keyCode<65)$('input').eq(0).val("");
+            });
+        });
+    </script>
+</head>
+<body>
+   <p></p>
+   <p></p>
+    <input type="text" value="아이디입력" />
+    <input type="text" value="패스워드입력" />
+    <button>next</button>
+</body>
+</html>

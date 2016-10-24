@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            $('button').eq(0).mouseover(function(){
+                $('div').css("background-color",'yellow');
+            }).mouseout(function(){
+                $('div').css("background-color",'white');
+            }).next().hover(function(){
+                $('div').css("background-color",'red');
+            },function(){
+                $('div').css("background-color",'white');
+            });
+            
+            
+        });
+    
+    </script>
+</head>
+<body>
+    <button>btn1</button>
+    <button>btn2</button>
+    <div>abcd</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

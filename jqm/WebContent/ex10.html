@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+    $(function(){
+        $('div').html('<h1>aaaa</h1>');
+        $('ul').html($('ul').html()+'<li>menu2</li>');
+        $('ul').html($('ul').html()+'<li>menu3</li>');
+        $('ul').html($('ul').html()+'<li>menu4</li>');
+        $('ul>li:eq(1)').after('<li>menu2-2</li>');
+        $('ul>li:eq(1)').before('<li>menu2-0</li>');
+        //var cnt=0;
+        //$('ul>li').append(function(idx,ele){
+            //return "->"+$($('ul>li')[idx]).html();
+        //    return "->"+ele;
+        //});
+        var im =$('<a href="http://daum.net">daum</a>');
+        im.attr('href','http://naver.com');
+        $('ul>li').append(im);
+        // var im2 ='<img src="imgs/simg01.jpg"/>';
+        //$('ul>li').append(im2);
+       
+    });
+    
+    </script>
+</head>
+<body>
+   <a href="http://naver.com">naver</a>
+    <div></div>
+    
+    <ul>
+        <li>menu1</li>
+    </ul>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
