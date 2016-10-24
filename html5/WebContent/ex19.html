@@ -1,0 +1,67 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        div>h1{
+            position: absolute;
+            left: -999px;
+            
+        }
+        #header:first-child{
+            height: 80px;
+            background-image: url(imgs/logo_ai.png);
+            background-size: 20%;
+            background-repeat: no-repeat;
+        }
+        #content a{
+            text-decoration: none;
+        }
+        #content a:after{
+            content: ' - ' attr(href);
+        }
+        #content span:after{
+            content: 'won';
+        }
+        #content>div:first-child{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            opacity: 0.1;
+            /*background-color: rgba(255,0,0,0);*/
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>한빛교육센터</h1>
+    </div>
+    <div id="content">
+        <div>box</div>
+        <h2>제휴 사이트</h2>
+        <p><a href="http://naver.com">네이버</a></p>
+        <p><a href="http://daum.net">다음</a></p>
+        <p><a href="http://www.seoul.go.kr/">서울시청</a></p>
+        <p><a href="http://www.hanbitedu.co.kr/">한빛교육센터</a></p>
+        <h2>결제 정보</h2>
+        <p>식기세트 : 49900<span></span></p>
+    </div>
+    <div id="footer">
+        
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grid system</title>
+    <link href="css/grid.css" rel="stylesheet" />
+    <style>
+        .header>img{
+            width: auto;
+            height: 80px;
+        }
+        .content>img{
+            width: 100%;
+            height: auto;
+        }
+        .menu2,.aside{
+            background-color: bisque;
+            box-sizing: border-box;
+            border-radius: 
+        }
+    </style>
+</head>
+<body>
+    <div class="container_12">
+       <div class="header grid_12">
+           <img alt="" src="imgs/logo_ai.png"/>
+       </div>
+       <div class="clear"></div>
+       <!--<div class="menu grid_12">
+           <ul>
+               <li><a href="#">menu1</a></li>
+               <li><a href="#">menu2</a></li>
+               <li><a href="#">menu3</a></li>
+               <li><a href="#">menu4</a></li>
+           </ul>
+       </div>-->
+       <div class="menu push_2">
+           <div class="grid_2">menu1</div>
+           <div class="grid_2">menu2</div>
+           <div class="grid_2">menu3</div>
+           <div class="grid_2">menu4</div>
+       </div>
+       <div class="clear"></div>
+       <div class="menu2 grid_3">서브메뉴</div>
+       <div class="content grid_6">
+           <img alt="" src="imgs/main.jpg"/>
+           <h1>환영합니다</h1>
+           <p>한빛 교육센터에 오신것을 환영합니다</p>
+       </div>
+       <div class="aside grid_3">광고</div>
+       <div class="clear"></div>
+       <div class="footer grid_12">
+           Copyright © 2016 Ministry of Public Safety and Security. All rights reserved.<br/>
+    국민재난안전포털에서 제공하는 자료는 공익목적으로만 사용해야하며 상업목적으로 사용할 경우 저작권을 침해합니다.
+       </div>
+       <div class="clear"></div>
+     </div>   
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

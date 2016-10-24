@@ -1,0 +1,72 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        div:nth-child(1){
+            background-color: #f00;
+            margin-left: 300px;
+        }
+        div:nth-child(2){
+            display: inline-block;
+            background-color: #0f0;
+            position: static;
+        }
+        div:nth-child(3){
+            display: inline-block;
+            background-color: #ff0;
+            position: absolute;
+            left: 50px;    /*x축*/
+            top: 150px;    /*y축*/
+        }
+        div:nth-child(4){
+            position: fixed;
+            display: inline-block;
+            background-color: #0ff;
+        }
+        div:nth-child(5){
+            background-color: #00f;
+            display: inline-block;
+            position: relative;
+            left: -200px;    /*x축*/
+            top: -100px;
+        }
+    </style>
+</head>
+<body>
+   <div id="top">1</div> 
+   <div>2</div>
+   <div>3</div>
+    <div>
+        <a href="#top">top</a><br/>
+        <a href="#down">down</a>
+    </div>
+   <div>5</div>
+   <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+   <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+   <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/> 
+   <div id="down"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

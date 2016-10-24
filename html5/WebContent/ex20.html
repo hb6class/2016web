@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>반응형 웹</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        @media screen and (max-width:399px){
+            /*모바일환경*/
+            #header>h1{
+                text-align: center;
+            }
+            #menu>ul{
+                /*display: none;*/
+            }
+            #menu>ul>li{
+                background-color: antiquewhite;
+                border-left: solid red 10px;
+                border-bottom: solid white 1px;
+            }
+            #menu>ul>li>a{
+                text-decoration: none;
+            }
+        }
+        @media screen and (min-width:400px) and (max-width:1023px){
+            /*타블렛pc환경*/
+            #header{
+                width: 100%;
+                height: 80px;
+                background-image: url(imgs/logo_ai.png);
+                background-repeat: no-repeat;
+                background-size: 374px 80px;
+            }
+            #header>h1{
+                position: absolute;
+                left: -999px;
+            }
+            #menu>ul>li{
+                background-color: aqua;
+                display: inline-block;
+                width: 48%;
+                height: 50px;
+                border-bottom: solid white 3px;
+            }
+            #menu>ul>li>a{
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                text-decoration: none;
+                font-size: 1.5em;
+                color: black;
+                line-height: 50px;
+                font-weight: bold;
+                /*text-transform: uppercase;*/
+                font-variant: small-caps;
+            }
+        }
+        @media screen and (min-width:1024px){
+            /*pc환경*/
+            #header{
+                width: 100%;
+                height: 80px;
+                background-image: url(imgs/logo_ai.png);
+                background-repeat: no-repeat;
+                background-size: 374px 80px;
+            }
+            #header>h1{
+                position: absolute;
+                left: -999px;
+            }
+            #menu{
+                background-color: blue;
+                /*border: solid blue 5px;*/
+                overflow: hidden;
+            }
+            #menu>ul{
+                width: 400px;
+                margin: 0px auto;
+            }
+            #menu>ul>li{
+                float: left;
+                list-style: none;
+            }
+            #menu>ul>li>a{
+                text-decoration: none;
+                border-left: solid white 5px;
+                border-right: solid white 5px;
+                display: inline-block;
+                width: 100px;
+                height: 30px;
+                box-sizing: border-box;
+                text-align: center;
+                color: white;
+                font-weight: bold;
+            }
+            #menu>ul>li>a:hover{
+                color: red;
+            }
+            #content{
+                clear: both;
+            }
+            #content>div{
+                width: 100%;
+                height: 300px;
+                background-image: url(imgs/main.jpg);
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>한빛교육센터</h1>
+    </div>
+    <div id="menu">
+        <ul>
+            <li id="mn1"><a href="#">Menu1</a></li>
+            <li id="mn2"><a href="#">Menu2</a></li>
+            <li id="mn3"><a href="#">Menu3</a></li>
+            <li id="mn4"><a href="#">Menu4</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <div></div>
+        <h1>환영합니다</h1>
+        <p>한빛 교육센터에 오신것을 환영합니다</p>
+    </div>
+    <div id="footer">
+        Code licensed MIT, docs CC BY 3.0.
+    </div>
+</body>
+</html>
+
+
+
+

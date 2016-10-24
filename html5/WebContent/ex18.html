@@ -1,0 +1,54 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            border: red 1px solid;
+        }
+        div>div{
+            width: 100px;
+            height: 100px;
+        }
+        div:first-child+div+div{
+            background-color: yellow;
+            position: relative;
+            left: 400px;
+        }
+        div:first-child+div+div>div{
+            background-color: red;
+            position: absolute;
+            left: -100px;
+            top: -100px;
+        }
+        div:first-child+div+div+div{
+            background-color: aqua;
+        }
+        div>h1{
+            position: absolute;
+            left: -999px;
+            
+        }
+        div:first-child{
+            background-image: url(imgs/logo_ai.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div><h1>한빛교육센터</h1></div>
+    <div>2</div>
+    <div>
+        <div>3</div>
+    </div>
+    <div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+    <div>6</div>
+    
+</body>
+</html>

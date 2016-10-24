@@ -1,0 +1,110 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body>div{
+            width: 85%;
+            margin: 0px auto;
+        }
+        #header>img{
+            height: 80px;
+            width: auto;
+        }
+        #menu{
+            background-color: gray;
+            height: 50px;
+        }
+        #menu>ul{
+            width: 430px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #menu>ul>li{
+            float: left;
+            list-style: none;
+            margin-top: 5px;
+            margin-right: 10px;
+        }
+        #menu>ul>li:last-child{
+            margin-right: 0px;
+        }
+        #menu>ul>li>a{
+            display: inline-block;
+            background-color: white;
+            width: 100px;
+            height: 40px;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 40px;
+            text-decoration: none;
+            color: gray;
+            font-weight: bold;
+        }
+        #menu>ul>li>a:hover{
+            background-color: yellow;
+            color: red;
+        }
+        #clear{
+            clear: both;
+        }
+        #menu2,#content,#aside{
+            float: left;
+        }
+        #menu2{
+            width: 20%;
+            background-color: beige;
+        }
+        #content{
+            width: 60%;
+        }
+        #content>img{
+            width: 100%;
+            height: auto;
+        }
+        #aside{
+            width: 20%;
+            background-color: aqua;
+        }
+        #footer{
+            clear: both;
+            height: 100px;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+   <div>
+    <div id="header">
+        <img alt="" src="imgs/logo_ai.png"/>
+    </div>
+    <div id="menu">
+        <ul>
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu4</a></li>
+        </ul>
+    </div>
+    <div id="clear"></div>
+    <div id="menu2">서브메뉴</div>
+    <div id="content">
+        <img alt="" src="imgs/main.jpg"/>
+        <h1>환영문구</h1>
+        <p>한빛 교육센터에 오신 것을 환영합니다</p>
+        <br/>
+    </div>
+    <div id="aside">
+        <img alt="" src="imgs/lnb_cscenter.gif"/>
+    </div>
+    <div id="footer">
+            Copyright © 2016 Ministry of Public Safety and Security. All rights reserved.<br/>
+    국민재난안전포털에서 제공하는 자료는 공익목적으로만 사용해야하며 상업목적으로 사용할 경우 저작권을 침해합니다.
+    </div>
+   </div>
+</body>
+</html>
